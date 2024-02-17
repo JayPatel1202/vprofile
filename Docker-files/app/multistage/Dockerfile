@@ -1,7 +1,4 @@
-FROM openjdk:11 AS BUILD_IMAGE
-
-# Install necessary packages
-RUN apt update && apt install -y git maven
+FROM maven:3-jdk-11 AS BUILD_IMAGE
 
 # Clone the repository and build
 RUN git clone https://github.com/devopshydclub/vprofile-project.git \
